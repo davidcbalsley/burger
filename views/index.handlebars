@@ -2,8 +2,6 @@
 
 <ul>
     {{#each burgers}}
-        <li>
-            <p>{{this.burger_name}}</p>
-        </li>
+        {{> burgers/burger-block}}
     {{/each}}
 </ul>
