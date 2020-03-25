@@ -8,7 +8,12 @@ var burger = require("../models/burger.js");
 
 // Create all routes and their associated logic
 router.get("/", function(req, res) {
-    // Nothing yet
+    burger.all(function(data) {
+        var hbsObject = {
+            burgers: data
+        };
+        res.render("index", hbsObject);
+    });
 });
 
 // Export routes for server.js to use
